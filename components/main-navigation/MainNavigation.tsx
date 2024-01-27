@@ -43,15 +43,15 @@ const MainNavigation = () => {
   return (
     <div className="fixed left-1/2 top-0 z-50 w-screen -translate-x-1/2 bg-dark-blue">
       <div
-        className={`text-white container mx-auto flex items-center justify-between pb-4 text-base uppercase ${scrolled ? "pt-4" : "pt-8"} transition-all duration-300`}
+        className={`container mx-auto flex items-center justify-between pb-4 text-base uppercase text-white ${scrolled ? "pt-4" : "pt-8"} transition-all duration-300`}
       >
-        <Link href="/">
+        <Link href="/" className="relative h-[31px] w-[220px]">
           <Image
             src={logo}
             alt="modality logo"
             priority
-            width={220}
-            height={31}
+            fill
+            className="object-contain"
           />
         </Link>
         <ul className="flex gap-x-28">
@@ -62,9 +62,11 @@ const MainNavigation = () => {
             </li>
           ))}
         </ul>
-        <button className="border-less-dark-blue group relative h-12 w-[170px] rounded-lg border py-3 uppercase">
+        <button className="group relative h-12 w-[170px] rounded-lg border border-less-dark-blue py-3 uppercase">
           <span className="absolute left-0 top-0 -z-10 h-full w-0 rounded-lg bg-cyan transition-all duration-300 group-hover:w-full"></span>
-          <span>call us</span>
+          <span className="relative z-10 font-bold transition-all duration-300 group-hover:text-dark-blue">
+            call us
+          </span>
         </button>
       </div>
     </div>

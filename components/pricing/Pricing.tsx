@@ -7,6 +7,7 @@ import shape from "../../assets/weird-shape.svg";
 import PricingCard from "./PricingCard";
 import { motion } from "framer-motion";
 import { fromBottom } from "@/tools/variants";
+import SectionTitle from "../ui/SectionTitle";
 
 const priceCardItems = [
   {
@@ -34,16 +35,12 @@ const priceCardItems = [
 
 const Pricing = () => {
   return (
-    <div className="text-white relative mt-56 flex flex-col items-center gap-y-4">
-      <Image
-        src={shape}
-        alt="weird shape"
-        width={464}
-        height={526}
-        className="absolute -top-[15%] -z-10"
+    <div className="relative mt-56 flex flex-col items-center gap-y-4 text-white">
+      <SectionTitle
+        title="Managed IT Services"
+        header="pricing"
+        className="max-w-none"
       />
-      <SectionHeader title="pricing" />
-      <h2 className="text-[56px] font-semibold">Managed IT Services</h2>
       <motion.div
         initial="offscreen"
         whileInView="onscreen"
@@ -55,7 +52,7 @@ const Pricing = () => {
             },
           },
         }}
-        className="mt-40 flex gap-x-9"
+        className="mt-40 flex lg:gap-x-2 2xl:gap-x-9"
       >
         {priceCardItems.map((card) => (
           <motion.div key={card.id} variants={fromBottom}>

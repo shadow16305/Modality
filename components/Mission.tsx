@@ -19,6 +19,7 @@ const Mission = () => {
             src={mission_img}
             alt="diverse-group-patients-waiting-attend-medical-appointment-sitting-busy-hospital-reception-desk-people-with-healthcare-insurance-having-examination-with-specialist"
             fill
+            sizes="100%"
             className="rounded-r-[40px] object-cover"
           />
         </motion.div>
@@ -33,7 +34,7 @@ const Mission = () => {
         <p className="text-3xl text-cyan">
           Roughly 90% of IT issues happen at the reception desk.
         </p>
-        <p className="text-3xl">
+        <p className="text-2xl">
           Our aim is to enhance the efficiency of your front desk and clinic
           operations for a smoother experience.
         </p>

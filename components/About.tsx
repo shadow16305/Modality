@@ -1,8 +1,14 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Image from "next/image";
 import SectionHeader from "./ui/SectionHeader";
 import disc from "../assets/disc.svg";
 import aboutImg from "../assets/about-image.png";
 import shape from "../assets/weird-shape-two.svg";
+import arrowpath from "../assets/arrow-path.svg";
+import { fromRight, opacity } from "@/tools/variants";
+import SectionTitle from "./ui/SectionTitle";
 
 const aboutListItems = [
   {
@@ -27,48 +33,82 @@ const aboutListItems = [
 
 const About = () => {
   return (
-    <div className="text-white container mx-auto mt-48 flex justify-between">
-      <div className="flex flex-col gap-y-32">
-        <div className="relative flex flex-col items-center gap-y-4">
-          <Image
-            src={shape}
-            alt="weird shape"
-            width={624}
-            height={688}
-            className="absolute -top-1/2 -z-10"
+    <>
+      <div className="mx-auto mt-48 flex justify-between text-white lg:max-w-[1060px] 2xl:max-w-[1364px]">
+        <div className="flex flex-col gap-y-32">
+          <SectionTitle
+            title="Experts in DICOM, RIS, & PACS Management"
+            header="about us"
+            className="max-w-[650px]"
           />
-          <SectionHeader title="about us" />
-          <h2 className="max-w-[660px] text-center text-[56px] font-semibold">
-            Experts in DICOM, RIS, & PACS Management
-          </h2>
+          <motion.ul
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+            variants={{
+              onscreen: {
+                transition: {
+                  staggerChildren: 0.2,
+                },
+              },
+            }}
+            className="flex flex-col gap-y-16"
+          >
+            {aboutListItems.map((item) => (
+              <motion.div
+                className="flex items-center gap-x-4"
+                key={item.id}
+                variants={opacity}
+              >
+                <Image
+                  src={disc}
+                  alt="disc"
+                  width={32}
+                  height={0}
+                  className="h-auto"
+                />
+                <li className="max-w-[500px]">
+                  <h4 className="text-2xl font-bold">{item.title}</h4>
+                  <p>{item.paragraph}</p>
+                </li>
+              </motion.div>
+            ))}
+          </motion.ul>
         </div>
-        <ul className="flex flex-col gap-y-16">
-          {aboutListItems.map((item) => (
-            <div className="flex items-center gap-x-4" key={item.id}>
-              <Image src={disc} alt="disc" width={32} height={32} />
-              <li className="max-w-[500px]">
-                <h4 className="text-2xl font-bold">{item.title}</h4>
-                <p>{item.paragraph}</p>
-              </li>
-            </div>
-          ))}
-        </ul>
+        <div className="flex flex-col items-center gap-y-24">
+          <motion.p
+            className="max-w-[675px]"
+            variants={opacity}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+          >
+            We're a dedicated team of experts, formerly employed by Canada's top
+            DICOM, RIS, & PACS providers. With an in-depth understanding of
+            diagnostic clinics, we're adept at resolving the specific IT issues
+            you encounter daily.
+          </motion.p>
+          <motion.div
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true }}
+            variants={fromRight}
+            className="relative h-[580px] w-[480px]"
+          >
+            <Image
+              src={aboutImg}
+              alt="person operating a weird computer"
+              fill
+              sizes="100%"
+              className="object-contain"
+            />
+          </motion.div>
+        </div>
       </div>
-      <div className="flex flex-col items-center gap-y-24">
-        <p className="max-w-[675px]">
-          We're a dedicated team of experts, formerly employed by Canada's top
-          DICOM, RIS, & PACS providers. With an in-depth understanding of
-          diagnostic clinics, we're adept at resolving the specific IT issues
-          you encounter daily.
-        </p>
-        <Image
-          src={aboutImg}
-          alt="person operating a weird computer"
-          width={480}
-          height={580}
-        />
+      <div className="flex justify-center">
+        <Image src={arrowpath} alt="arrow" />
       </div>
-    </div>
+    </>
   );
 };
 
