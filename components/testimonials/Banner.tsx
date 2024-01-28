@@ -4,7 +4,7 @@ import stars from "../../assets/stars.png";
 const Banner = () => {
   return (
     <div className="flex rounded-[10px] bg-[#0E152F]">
-      <div className="flex max-w-[740px] flex-col items-center justify-center gap-y-12 px-14">
+      <div className="flex max-w-[740px] flex-col items-center justify-center gap-y-12 px-14 py-10">
         <h2 className="text-5xl font-semibold leading-tight">
           We understand the daily stress of running a clinic
         </h2>

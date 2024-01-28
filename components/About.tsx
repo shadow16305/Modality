@@ -34,7 +34,10 @@ const aboutListItems = [
 const About = () => {
   return (
     <>
-      <div className="mx-auto mt-48 flex justify-between text-white lg:max-w-[1060px] 2xl:max-w-[1364px]">
+      <section
+        className="mx-auto mt-48 flex scroll-mt-32 justify-between text-white lg:max-w-[1060px] 2xl:max-w-[1364px]"
+        id="about"
+      >
         <div className="flex flex-col gap-y-32">
           <SectionTitle
             title="Experts in DICOM, RIS, & PACS Management"
@@ -104,7 +107,7 @@ const About = () => {
             />
           </motion.div>
         </div>
-      </div>
+      </section>
       <div className="flex justify-center">
         <Image src={arrowpath} alt="arrow" />
       </div>

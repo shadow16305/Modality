@@ -9,17 +9,17 @@ import Link from "next/link";
 const navlinks = [
   {
     id: "n1",
-    href: "",
+    href: "#about",
     text: "about us",
   },
   {
     id: "n2",
-    href: "",
+    href: "#services",
     text: "services",
   },
   {
     id: "n3",
-    href: "",
+    href: "#pricing",
     text: "pricing",
   },
 ];
@@ -41,7 +41,7 @@ const MainNavigation = () => {
   }, []);
 
   return (
-    <div className="fixed left-1/2 top-0 z-50 w-screen -translate-x-1/2 bg-dark-blue">
+    <nav className="fixed left-1/2 top-0 z-50 w-screen -translate-x-1/2 bg-dark-blue">
       <div
         className={`container mx-auto flex items-center justify-between pb-4 text-base uppercase text-white ${scrolled ? "pt-4" : "pt-8"} transition-all duration-300`}
       >
@@ -69,7 +69,7 @@ const MainNavigation = () => {
           </span>
         </button>
       </div>
-    </div>
+    </nav>
   );
 };
 

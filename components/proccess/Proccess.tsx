@@ -42,7 +42,7 @@ const proccesItems = [
 
 const Proccess = () => {
   return (
-    <div className="mx-auto flex flex-col items-center gap-y-[72px] text-white lg:max-w-[1060px] 2xl:max-w-[1364px]">
+    <section className="mx-auto flex flex-col items-center gap-y-[72px] text-white lg:max-w-[1060px] 2xl:max-w-[1364px]">
       <div className="flex flex-col gap-y-4">
         <SectionHeader title="process" />
         <h2 className="text-[56px] font-semibold">How We Work</h2>
@@ -72,7 +72,7 @@ const Proccess = () => {
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </section>
   );
 };
 

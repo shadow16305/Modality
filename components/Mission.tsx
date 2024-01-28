@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const Mission = () => {
   return (
-    <div className="text-white mt-48 flex items-center gap-x-20">
+    <section className="mt-48 flex items-center gap-x-20 text-white">
       <div className="w-1/2">
         <motion.div
           initial={{ width: 0 }}
@@ -39,7 +39,7 @@ const Mission = () => {
           operations for a smoother experience.
         </p>
       </motion.div>
-    </div>
+    </section>
   );
 };
 

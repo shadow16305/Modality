@@ -35,7 +35,10 @@ const priceCardItems = [
 
 const Pricing = () => {
   return (
-    <div className="relative mt-56 flex flex-col items-center gap-y-4 text-white">
+    <section
+      className="relative mt-56 flex scroll-mt-32 flex-col items-center gap-y-4 text-white"
+      id="pricing"
+    >
       <SectionTitle
         title="Managed IT Services"
         header="pricing"
@@ -65,7 +68,7 @@ const Pricing = () => {
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </section>
   );
 };
 

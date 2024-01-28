@@ -32,7 +32,7 @@ const teamCardItems = [
 
 const Team = () => {
   return (
-    <div className="mx-auto mt-48 flex flex-col gap-y-24 text-white lg:max-w-[1060px] 2xl:max-w-[1364px]">
+    <section className="mx-auto mt-48 flex flex-col gap-y-24 text-white lg:max-w-[1060px] 2xl:max-w-[1364px]">
       <div className="flex items-center justify-between">
         <SectionTitle
           title="Meet Our Expert Team"
@@ -69,7 +69,7 @@ const Team = () => {
           </motion.div>
         ))}
       </motion.div>
-    </div>
+    </section>
   );
 };
 

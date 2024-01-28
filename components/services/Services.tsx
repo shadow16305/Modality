@@ -65,7 +65,10 @@ const serviceCardItemsTwo = [
 
 const Services = () => {
   return (
-    <div className="mx-auto mt-20 flex flex-col gap-y-[72px] text-white lg:max-w-[1060px] 2xl:max-w-[1364px]">
+    <section
+      className="mx-auto mt-20 flex scroll-mt-24 flex-col gap-y-[72px] text-white lg:max-w-[1060px] 2xl:max-w-[1364px]"
+      id="services"
+    >
       <div className="flex items-center justify-between">
         <div className="flex max-w-[700px] flex-wrap gap-x-8 gap-y-[72px]">
           {serviceCardItemsOne.map((item) => (
@@ -105,7 +108,7 @@ const Services = () => {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

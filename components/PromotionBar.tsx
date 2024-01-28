@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const PromotionBar = () => {
   return (
-    <div className="text-white mt-48 bg-[url('../assets/promotion-bar.png')] bg-cover pb-24 pt-48">
+    <section className="mt-48 bg-[url('../assets/promotion-bar.png')] bg-cover pb-24 pt-48 text-white">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
@@ -28,7 +28,7 @@ const PromotionBar = () => {
         </p>
         <p className="text-xl font-semibold">(647) 227-5559</p>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
